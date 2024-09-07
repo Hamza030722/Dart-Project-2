@@ -1,0 +1,109 @@
+void main() {
+ // Create a list if names and print all name
+ print ("---------- Quesstion No : 1 ----------");
+  
+ List myNames = ["Hamza" , "Ameer" , "Armaghan" , "Usman" , "Mussayyab"];
+  print(myNames[0]);
+  print(myNames[1]);
+  print(myNames[2]);
+  print(myNames[3]);
+  print(myNames[4]);
+  
+// Create a list of Days and print Sunday
+  
+ print ("---------- Quesstion No : 2 ----------");
+  
+   List days = ["Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" ,"Saturday" , "Sunday"];
+  print(days[6]);
+  
+   // Create list with students details
+  
+ print ("---------- Quesstion No : 3 ----------");
+  
+  
+  Map students =  {
+    
+    "Roll Number" : 123456,
+    "Name" : "Hamza",
+    "Class" : 12,
+    "Garde" : "A",
+    "Percentage" : "92 %",
+  };
+  
+  print(students);
+  
+   // Create list and print small and largest number
+  
+  print ("---------- Quesstion No : 4 ----------");
+  
+  List numbers = [11 , 2 , 46 , 7 , 100 , 150 , 1, 0.6];
+  
+  //Sorting the list.
+  
+  numbers.sort();
+  	
+  print("The Smallest Value in given list is : ${numbers.first}");
+  print("The Largest Value in given list is : ${numbers.last}");
+ 
+//Given a list of integers, write a dart code that returns the maximum value     from the list.
+  print ("---------- Quesstion No : 5 ----------");
+  
+  List large = [1, 44, 199, 101, 1050, 253];
+  print("The Given List $large");
+  large.sort();
+  print("The maximum number in given list is ${large.last}.");
+
+  //Write a Dart code that takes in a list of strings and prints a new list      with the elements in reverse order. The original list should remain unchanged
+  
+  print ("---------- Quesstion No : 6 ----------");
+  
+  var originalList = [ "Apple", "Beetroot" , "Grapes", "Pizza" ];
+  
+  print("The original List is $originalList");
+  
+  // reversed the list
+
+  var revList = originalList.reversed ;
+
+  // create new list
+  
+  var outPut = (revList).toList() ;
+  
+  print("The reversed list is $outPut");
+  
+  
+  print ("---------- Quesstion No : 7 ----------");
+  
+  // Example list of integers
+  
+  List <int> num7 = [2, -9, 0, -1, -10, 10, -6, 3, 7];
+  
+  // Call the function to filter and print positive and negative numbers
+  
+  List <int> positiveNum = num7.where((n) => n > 0).toList();
+  List <int> negativeNum = num7.where((n) => n < 0).toList();
+  
+  print ("The positive numbers in list is $positiveNum");
+  print ("The positive numbers in list is $negativeNum");
+
+  print ("---------- Quesstion No : 8 Example # 1----------");
+
+  
+  // List of user eligibility
+  List<String> usersEligibility = ['John', 'Alice', 'eligible', 'Mike', 'Sarah', 'Tom'];
+
+  // Remove all occurrences of 'eligible0027
+  usersEligibility.removeWhere((value) => value == 'eligible');
+  
+  // Print the updated list
+  print(usersEligibility);
+  
+ print ("---------- Quesstion No : 8 Example # 2----------");
+ 
+  List<String> usersEligibility2 = ['John', 'Alice', 'eligible', 'Mike', 'Sarah', 'Tom'];
+  
+  usersEligibility2.retainWhere((value) => value != "eligible");
+  print(usersEligibility2);
+
+
+}
