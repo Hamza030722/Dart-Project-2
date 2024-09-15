@@ -1,0 +1,66 @@
+void main() {
+  // Q.01: Check if the car is a sedan and red in color
+  Map<String, dynamic> car = {
+    'brand': 'Toyota',
+    'color': 'Red',
+    'isSedan': true,
+  };
+
+  if (car['isSedan'] == true && car['color'] == 'Red') {
+    print('Match');
+  } else {
+    print('No match');
+  }
+
+  // Q.02: Check if the user is an active admin
+  Map<String, dynamic> user = {
+    'name': 'John Doe',
+    'isAdmin': true,
+    'isActive': true,
+  };
+
+  if (user['isAdmin'] == true && user['isActive'] == true) {
+    print('Active admin');
+  } else {
+    print('Not an active admin');
+  }
+
+  // Q.03: Print the multiplication table of a given number
+  int number = 5;  // Change this number to get a different multiplication table
+  for (int i = 1; i <= 10; i++) {
+    print('$number x $i = ${number * i}');
+  }
+
+  // Q.04: Find the largest element in a list
+  List<int> numbers = [3, 9, 1, 6, 4, 2, 8, 5, 7];
+  int largest = numbers[0];
+
+  for (int number in numbers) {
+    if (number > largest) {
+      largest = number;
+    }
+  }
+
+  print('Largest element: $largest');
+} 
+
+
+
+
+
+
+   ANSWER
+
+Match
+Active admin
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50
+Largest element: 9
