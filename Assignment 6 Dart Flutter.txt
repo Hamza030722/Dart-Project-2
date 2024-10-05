@@ -1,0 +1,327 @@
+void main() {
+  print("----------------------------------------------");
+  print("*************** Assignment No 6***************");
+  print("----------------------------------------------");
+  print("                                             ");
+  print("---------------------------------------------");
+  print("*************** Question No 1 ***************");
+  print("---------------------------------------------");
+  print("                                             ");
+
+  List name = ["Hamza", "Nuzhat", "Armaghan", "Usman", "Amreen"];
+
+  for (int i = 0; i < name.length; i++) {
+    print("$i. ${name[i]}.");
+  }
+  ;
+
+  print("                                             ");
+  print("---------------------------------------------");
+  print("*************** Question No 2 ***************");
+  print("---------------------------------------------");
+  print("                                             ");
+
+  List<String> days = [];
+
+  // Add days of the week to the list
+  days.add('Monday');
+  days.add('Tuesday');
+  days.add('Wednesday');
+  days.add('Thursday');
+  days.add('Friday');
+  days.add('Saturday');
+  days.add('Sunday');
+
+  // Print each day using a for loop
+  for (String day in days) {
+    print(day);
+  }
+  ;
+
+  print("                                             ");
+  print("---------------------------------------------");
+  print("*************** Question No 3 ***************");
+  print("---------------------------------------------");
+  print("                                             ");
+  // Step 1: Create a list of days
+
+  List<String> days2 = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ];
+  // Step 2: Print the initial list of days
+
+  print('Days of the week:');
+  print(days2);
+  print("                                             ");
+  // Step 3: Remove days one by one and print the list after each removal
+
+  while (days2.isNotEmpty) {
+    String removedDays = days2.removeAt(0);
+
+    print("Removed : $removedDays.");
+    // Print the remaining days
+    print('Remaining days: $days2');
+  }
+  print('All days have been removed. The list is now empty: $days2');
+
+  print("                                             ");
+  print("---------------------------------------------");
+  print("*************** Question No 4 ***************");
+  print("---------------------------------------------");
+  print("                                             ");
+
+  List num = [22, 55, 87, 5, 1, 0, 99];
+
+  num.sort();
+
+  print("Sorting List $num");
+  print("Smallest Number in List ${num.first}.");
+  print("Largest Number in List ${num.last}.");
+
+  print("                                             ");
+  print("---------------------------------------------");
+  print("*************** Question No 5 ***************");
+  print("---------------------------------------------");
+  print("                                             ");
+
+  // Create a map with names as keys and phone numbers as values
+  Map<String, String> phoneBook = {
+    'Hamza': '1234-5678',
+    'Nuzhat': '9876-5432',
+    'Amreen': '555-1234',
+    'Usama': '333-8888',
+    'Armaghan': '1111-2222'
+  };
+
+  // Find all keys that have length 5
+  List<String> keysWithLength4 =
+      phoneBook.keys.where((key) => key.length == 5).toList();
+
+  // Print the result
+  print(keysWithLength4);
+
+  print("                                             ");
+  print("---------------------------------------------");
+  print("*************** Question No 6 ***************");
+  print("---------------------------------------------");
+  print("                                             ");
+
+  // Create the world map containing countries
+  Map<String, Map<String, String>> world = {
+    'USA': {
+      'capitalCity': 'Washington, D.C.',
+      'currency': 'USD',
+      'language': 'English'
+    },
+    'France': {'capitalCity': 'Paris', 'currency': 'EUR', 'language': 'French'},
+    'Japan': {
+      'capitalCity': 'Tokyo',
+      'currency': 'JPY',
+      'language': 'Japanese'
+    },
+    'Germany': {
+      'capitalCity': 'Berlin',
+      'currency': 'EUR',
+      'language': 'German'
+    }
+  };
+
+  // Specify a country to print its capital and currency
+  String countryKey = 'Japan';
+
+  // Check if the country exists and print capital and currency
+  if (world.containsKey(countryKey)) {
+    var countryInfo = world[countryKey];
+    print('Capital of $countryKey: ${countryInfo!['capitalCity']}');
+    print('Currency of $countryKey: ${countryInfo['currency']}');
+    print('Currency of $countryKey: ${countryInfo['language']}');
+  } else {
+    print('Country not found!');
+  }
+
+  print("                                             ");
+  print("---------------------------------------------");
+  print("*************** Question No 7 ***************");
+  print("---------------------------------------------");
+  print("                                             ");
+
+  // Create a map for expenses
+  Map<String, double> expenses = {
+    'sun': 3000.0,
+    'mon': 3000.0,
+    'tue': 3234.0,
+    'fri': 2000.0,
+  };
+
+  // Key to check
+  String dayToCheck = 'fri';
+
+  // Check if "fri" exists in expenses
+  if (expenses.containsKey(dayToCheck)) {
+    // If it exists, update its value
+    expenses[dayToCheck] = 5000.0;
+  } else {
+    // If it doesn't exist, add it to the map
+    expenses[dayToCheck] = 5000.0;
+  }
+
+  // Print the updated expenses
+  print(expenses);
+
+  print("                                             ");
+  print("---------------------------------------------");
+  print("*************** Question No 8 ***************");
+  print("---------------------------------------------");
+  print("                                             ");
+
+  // Initial list of user eligibility
+  List<Map> usersEligibility = [
+    {'name': 'John', 'eligible': true},
+    {'name': 'Alice', 'eligible': false},
+    {'name': 'Mike', 'eligible': true},
+    {'name': 'Sarah', 'eligible': true},
+    {'name': 'Tom', 'eligible': false},
+  ];
+
+  // Remove users who are not eligible
+  usersEligibility.removeWhere((user) => !user['eligible']!);
+
+  // Print the updated list
+  print(usersEligibility);
+
+  print("                                             ");
+  print("---------------------------------------------");
+  print("*************** Question No 9 ***************");
+  print("---------------------------------------------");
+  print("                                             ");
+
+  List num2 = [22, 55, 44, 1, 99, 3];
+  num2.sort();
+
+  // Print maximum number.
+
+  print("The Maximum numbe in given list is ${num2.last}");
+
+  print("                                             ");
+  print("---------------------------------------------");
+  print("*************** Question No 10 ***************");
+  print("---------------------------------------------");
+  print("                                             ");
+
+  removedDuplicateValues();
+
+  print("                                             ");
+  print("---------------------------------------------");
+  print("*************** Question No 14 ***************");
+  print("---------------------------------------------");
+  print("                                             ");
+
+  int number = 10; // Start from 10
+
+  // Use a while loop to print numbers in reverse
+  while (number > 0) {
+    print(number);
+    number--; // Decrement the number
+  }
+
+  print("                                             ");
+  print("---------------------------------------------");
+  print("*************** Question No 15 ***************");
+  print("---------------------------------------------");
+  print("                                             ");
+
+  // Example list of integers
+  List<int> originalList = [3, -1, 4, -2, 5, -7, 6, 0, -3, 8];
+
+  // Removed negative values
+  originalList.removeWhere((number) => number < 0);
+
+  // Print the new list containing only positive numbers
+  print("The Positive Numbers $originalList");
+
+  print("                                             ");
+  print("---------------------------------------------");
+  print("*************** Question No 16 ***************");
+  print("---------------------------------------------");
+  print("                                             ");
+
+  // Given list of integers
+  List<int> originalList1 = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+  // removed even numbers
+  originalList1.removeWhere((number) => number % 2 == 0);
+  print("The Odd Numbers $originalList1");
+
+  print("                                             ");
+  print("---------------------------------------------");
+  print("*************** Question No 17 ***************");
+  print("---------------------------------------------");
+  print("                                             ");
+  // Given list of integers
+  List<int> originalList2 = [1, 2, 3, 4, 5];
+
+  // Use the map method to create a new list with each value squared
+  List<int> squaredList =
+      originalList2.map((number) => number * number).toList();
+
+  // Print the new list containing squared values
+  print(squaredList);
+
+  print("                                             ");
+  print("---------------------------------------------");
+  print("*************** Question No 18 ***************");
+  print("---------------------------------------------");
+  print("                                             ");
+  int sum = 0; // Variable to hold the sum
+  int number3 = 1; // Start from the first odd number
+
+  do {
+    // Add the current odd number to the sum
+    sum += number3;
+    // Move to the next odd number
+    number3 += 2;
+  } while (number3 <= 50); // Continue until number exceeds 50
+
+  // Print the result
+  print('The sum of odd numbers from 1 to 50 is: $sum');
+
+  print("                                             ");
+  print("---------------------------------------------");
+  print("*************** Question No 19 ***************");
+  print("---------------------------------------------");
+  print("                                             ");
+
+  // Given map representing a product
+  Map<String, dynamic> product = {
+    'name': 'Laptop',
+    'price': 999.99,
+    'quantity': 1
+  };
+
+  // Check if the product is in stock
+  if (product['quantity'] >= 0) {
+    print("In-Stock");
+  } else
+    print("Out of Stock");
+}
+
+//   Given list of strings with duplicate and remove with using funcation
+removedDuplicateValues() {
+  List<String> fruit = [
+    'apple',
+    'apple',
+    'banana',
+    'apple',
+    'orange',
+    'banana',
+    'kiwi'
+  ];
+  List removedValue = fruit.toSet().toList();
+  print(removedValue);
+}
