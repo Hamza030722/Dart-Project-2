@@ -1,0 +1,46 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(ChessGame());
+}
+
+class ChessGame extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Chess Game',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: ChessBoard(),
+    );
+  }
+}
+
+class ChessBoard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Chess Board'),
+      ),
+      body: Center(
+        child: Container(
+          width: 400,
+          height: 400,
+          child: GridView.builder(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 8,
+            ),
+            itemBuilder: (context, index) {
+              final isBlackSquare = (index ~/ 8 + index % 8) % 2 == 1;
+              return Container(
+                color: isBlackSquare ? Colors.brown : Colors.white,
+              );
+            },
+          ),
+        ),
+      ),
+    );
+  }
+}
